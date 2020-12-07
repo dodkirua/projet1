@@ -29,8 +29,16 @@ body {
     border : blue 2px solid;
 }
 
-#rules{
+#rightDiv{
     width: 49%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#rules{
+    width: 100%;
     height: 44%;
     padding: 2%;
     font-size: 2rem;
@@ -38,7 +46,7 @@ body {
 
 #interact {
     width: 98%;
-    height: 10%;
+    height: 20%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -69,8 +77,8 @@ body {
 }
 
 #answer {
-    width: 49%;
-    height: 30%;
+    width: 100%;
+    height: 50%;
     align-self: flex-end;
     font-size: 2rem;
     padding: 1rem;
@@ -79,6 +87,7 @@ body {
 
 label, input, button {
     height: 50%;
+    text-align: center;
 }
 
 label{
@@ -90,12 +99,53 @@ label{
     display: none;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
     #rules{
         font-size: 1.5rem;
     }
 
     p{
         font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #container{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 100%;
+        height: 100%;
+    }
+
+    #rightDiv{
+        width: 100%;
+        height: 30%;
+    }
+
+    .reminder{
+        width: 100%;
+        height: 50%;
+        border-bottom: 0.2rem ;
+    }
+
+    #interact{
+        flex-direction: column;
+    }
+
+    #interactLeft{
+        order: 10;
+        width: 100%;
+        height: 50%;
+    }
+
+    #interactRight{
+        width: 100%;
+        height: 50%;
+    }
+    #rules, #answer {
+        border: none;
+    }
+    #rightDiv{
+        border : blue 2px solid;
     }
 }
