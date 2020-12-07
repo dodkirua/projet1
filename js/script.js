@@ -10,7 +10,8 @@ function valueRandom(){
 }
 
 /**
- *
+ * Test les valeurs de val en la comparant a value retourne true si c'est identique
+ * et small pour plus petit et big pour plus grand
  * @param val
  * @returns {string|boolean}
  */
@@ -26,8 +27,10 @@ function testValue (val){
     }
 }
 
-document.getElementById("valid").addEventListener("click",function(){
-
+/**
+ * fonction de réaction au event
+ */
+function reaction (){
     let valTest = input.value;
 
     if (input.valueAsNumber === "NaN"){
@@ -56,8 +59,27 @@ document.getElementById("valid").addEventListener("click",function(){
             }
         }
     }
-});
+}
 
+/**
+ * reaction au clic
+ */
+document.getElementById("valid").addEventListener("click",reaction);
+
+/**
+ * reaction a la touche entrée
+ */
+document.addEventListener("keydown", function (e){
+
+    if (e.key === "Enter"){
+        reaction();
+    }
+})
+
+
+/**
+ * Bouton restart
+ */
 document.getElementById("restart").addEventListener('click', function (){
 
     for (let i=1 ; i <= error ; i++){
