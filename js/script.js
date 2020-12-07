@@ -3,8 +3,6 @@ let error = 0;
 let answer = document.getElementById("answer");
 let restart = document.getElementById("restart");
 let input = document.getElementById("value");
-console.log(value);
-
 input.value="";
 
 function valueRandom(){
