@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+#container {
+    height: 90%;
+    width: 90%;
+    margin: auto;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.reminder, input, #answer, #rules {
+    border : blue 2px solid;
+}
+
+#rules{
+    width: 49%;
+    height: 44%;
+    padding: 2%;
+    font-size: 2rem;
+}
+
+#interact {
+    width: 98%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#interactLeft{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#interactRight{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.reminder{
+    width: 49%;
+    height: 75%;
+    padding: 0.5rem;
+    font-size: 3rem;
+    text-align: center;
+}
+
+#answer {
+    width: 49%;
+    height: 30%;
+    align-self: flex-end;
+    font-size: 2rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+label, input, button {
+    height: 50%;
+}
+
+label{
+    align-self: center;
+    font-size: 1.5rem;
+}
+
+#restart {
+    display: none;
+}
+
+@media screen and (max-width: 500px) {
+    #rules{
+        font-size: 1.5rem;
+    }
+
+    p{
+        font-size: 2rem;
+    }
+}
